@@ -26,5 +26,5 @@ You can also say more natural things like "Take me to the home page." or "What i
 
 ## Setup
 
-* Import {proj_root}/bot.JSON as new [Luis.AI](https://luis.ai) app.
-* Set AppID and Secret in {proj_root}/appsettings.json
+* Import `{proj_root}/bot.JSON` as new [Luis.AI](https://luis.ai) app.
+* Set AppID and Secret in `{proj_root}/appsettings.json`
