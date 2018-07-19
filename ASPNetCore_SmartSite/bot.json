@@ -1,0 +1,136 @@
+﻿{
+	"luis_schema_version": "3.0.0",
+	"versionId": "0.1",
+	"name": "ASPNetCore_SmartSite",
+	"desc": "ASP NET Core Smart Site",
+	"culture": "en-us",
+	"intents": [
+		{
+			"name": "ContactUsBy"
+		},
+		{
+			"name": "NavigateWebPage"
+		},
+		{
+			"name": "None"
+		}
+	],
+	"entities": [],
+	"composites": [],
+	"closedLists": [
+		{
+			"name": "ContactSection",
+			"subLists": [
+				{
+					"canonicalForm": "Twitter",
+					"list": []
+				},
+				{
+					"canonicalForm": "Phone",
+					"list": [
+						"telephone",
+						"fax"
+					]
+				},
+				{
+					"canonicalForm": "Email",
+					"list": []
+				}
+			],
+			"roles": []
+		},
+		{
+			"name": "SiteSection",
+			"subLists": [
+				{
+					"canonicalForm": "home",
+					"list": []
+				},
+				{
+					"canonicalForm": "about",
+					"list": []
+				},
+				{
+					"canonicalForm": "contact",
+					"list": []
+				}
+			],
+			"roles": []
+		}
+	],
+	"patternAnyEntities": [],
+	"regex_entities": [],
+	"prebuiltEntities": [],
+	"model_features": [],
+	"regex_features": [],
+	"patterns": [
+		{
+			"pattern": "contact {ContactSection}",
+			"intent": "ContactUsBy"
+		},
+		{
+			"pattern": "{ContactSection}",
+			"intent": "ContactUsBy"
+		},
+		{
+			"pattern": "take me to {SiteSection}",
+			"intent": "NavigateWebPage"
+		},
+		{
+			"pattern": "{SiteSection}",
+			"intent": "NavigateWebPage"
+		}
+	],
+	"utterances": [
+		{
+			"text": "contact by phone",
+			"intent": "ContactUsBy",
+			"entities": []
+		},
+		{
+			"text": "contact phone",
+			"intent": "ContactUsBy",
+			"entities": []
+		},
+		{
+			"text": "contact through phone",
+			"intent": "ContactUsBy",
+			"entities": []
+		},
+		{
+			"text": "contact via phone",
+			"intent": "ContactUsBy",
+			"entities": []
+		},
+		{
+			"text": "go to home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		},
+		{
+			"text": "home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		},
+		{
+			"text": "navigate to home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		},
+		{
+			"text": "show home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		},
+		{
+			"text": "take me home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		},
+		{
+			"text": "take me to home",
+			"intent": "NavigateWebPage",
+			"entities": []
+		}
+	]
+}
